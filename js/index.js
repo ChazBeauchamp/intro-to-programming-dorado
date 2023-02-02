@@ -28,37 +28,12 @@ for (let i = 0; i < skills.length; i++) {
 
 const messageForm = document.querySelector('[name="leave_message"]');
 
-// Display Messages in List Section
-
-const messageSection = document.querySelector("#messages");
-
-const messageList = messageSection.querySelector("ul");
-
-const newMessage = document.createElement("li");
-
-// Remove Buttons
-
-const removeButton = document.createElement("button");
-
-removeButton.innerText = "remove";
-
-removeButton.setAttribute("type", "button");
-
-removeButton.addEventListener("click", (event) => {
-  const entry = removeButton.parentNode;
-
-  entry.remove();
-});
-
-// Add Message to List
-
-// newMessage.appendChild(removeButton);
-// messageList.appendChild(newMessage);
-
 // Form Submission
 
 messageForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  // Track submitted values
 
   const senderName = event.target.name.value;
 
@@ -72,13 +47,31 @@ messageForm.addEventListener("submit", (event) => {
 
   console.log(senderMessage);
 
-  // const messageSection = document.querySelector("#messages");
+  // Displaying messages in list
 
-  // const messageList = messageSection.querySelector("ul");
+  const messageSection = document.querySelector("#messages");
 
-  // const newMessage = document.createElement("li");
+  const messageList = messageSection.querySelector("ul");
+
+  const newMessage = document.createElement("li");
 
   newMessage.innerHTML = `<a href="${event.target.email.value}">${event.target.name.value}</a><span> wrote: ${event.target.message.value} </span>`;
+
+  // Make remove button
+
+  const removeButton = document.createElement("button");
+
+  removeButton.innerText = "remove";
+
+  removeButton.setAttribute("type", "button");
+
+  removeButton.addEventListener("click", (event) => {
+    const entry = removeButton.parentNode;
+
+    entry.remove();
+  });
+
+  // Adding remove button to each new message and adding each new message to the list
 
   newMessage.appendChild(removeButton);
 
