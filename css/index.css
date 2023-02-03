@@ -1,0 +1,63 @@
+* {
+  background-color: bisque;
+  color: brown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  margin: 30px;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: darkolivegreen;
+}
+
+#skills li,
+#messages li {
+  font-style: italic;
+}
+
+.info {
+  border-style: dashed;
+  padding: 2em;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  font-size: 1.05em;
+  padding: 0.1em;
+  border: double;
+}
+
+label,
+input {
+  display: block;
+}
+
+#submit,
+#removebtn {
+  background-color: #760e0e;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1em;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 6px 12px;
+  background-color: steelblue;
+}
