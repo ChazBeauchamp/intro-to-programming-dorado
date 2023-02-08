@@ -64,6 +64,7 @@ messageForm.addEventListener("submit", (event) => {
   removeButton.innerText = "remove";
 
   removeButton.setAttribute("type", "button");
+  removeButton.setAttribute("id", "removebtn");
 
   removeButton.addEventListener("click", (event) => {
     const entry = removeButton.parentNode;

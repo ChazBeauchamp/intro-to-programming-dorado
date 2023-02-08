@@ -2,12 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beauchamp Develops</title>
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <section>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#connect">Connect</a>
+      <a href="#leavemessage">Leave Message</a>
+    </div>
+    <section id="about">
       <h2>About</h2>
-      <p>
+      <p class="info">
         My name is Chaz Beauchamp and I am currently training to work in the
         field of web development. I am originally from Indianapolis, Indiana but
         currently reside in Durham, North Carolina. Outside of programming, my
@@ -15,40 +25,42 @@
       </p>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
-      <p>
-        Since graduating from college in 2021, I have worked as a college
-        adviser for the Duke College Advising Corps, serving students at both
-        Lee County High School and City of Medicine Academy. While serving as a
-        college adviser, I have simultaneously studied under Code The Dream's
-        Introduction to Programming class, learning skills in HTML, Javascript,
-        CSS, and more.
-      </p>
+      <div class="flex-container">
+        <div class="expone">
+          College Adviser for Duke College Advising Corps
+        </div>
+        <div class="exptwo">
+          Code The Dream's Introduction to Programming class
+        </div>
+      </div>
     </section>
     <section id="skills">
       <h2>Skills</h2>
       <ul></ul>
     </section>
-    <section>
+    <section id="connect">
       <h2>Connect</h2>
-      <p>
+      <p class="info">
         You can reach me at my email: chazbeauchamp1@gmail.com or see my
         programming work at: https://github.com/ChazBeauchamp
       </p>
     </section>
-    <section>
+    <section id="leavemessage">
       <h2>Leave a Message</h2>
-      <form name="leave_message">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required /> <br />
-        <label for="name">Email:</label>
-        <input type="email" name="email" id="email" required /> <br />
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" required> </textarea> <br />
-        <!-- <label for="name">Send:</label> -->
-        <button type="submit" id="submit">Submit</button> <br />
-      </form>
+      <div class="flex-container">
+        <form name="leave_message">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required /> <br />
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required /> <br />
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" required> </textarea> <br />
+          <!-- <label for="name">Send:</label> -->
+          <button type="submit" id="submit">Submit</button> <br />
+        </form>
+      </div>
     </section>
     <section id="messages">
       <h2>Messages</h2>
