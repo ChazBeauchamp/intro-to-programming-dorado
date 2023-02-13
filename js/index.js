@@ -81,18 +81,19 @@ messageForm.addEventListener("submit", (event) => {
   messageForm.reset();
 });
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/ChazBeauchamp/repos");
-githubRequest.send();
-githubRequest.addEventListener("load", function () {
-  repositories = JSON.parse(this.response);
-  console.log(repositories);
-  projectSection = document.getElementById("projects");
-  projectList = projectSection.querySelector("ul");
+fetch("https://api.github.com/users/ChazBeauchamp/repos", { mode: "cors" })
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (response) {
+    repositories = response;
+    console.log(repositories);
+    projectSection = document.getElementById("projects");
+    projectList = projectSection.querySelector("ul");
 
-  for (let j = 0; j < repositories.length; j++) {
-    project = document.createElement("li");
-    project.innerText = repositories[j].name;
-    projectList.appendChild(project);
-  }
-});
+    for (let j = 0; j < repositories.length; j++) {
+      project = document.createElement("li");
+      project.innerText = repositories[j].name;
+      projectList.appendChild(project);
+    }
+  });
