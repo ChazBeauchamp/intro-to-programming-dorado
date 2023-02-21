@@ -1,10 +1,8 @@
-// console.log("work");
-
 // Getting dates
 today = new Date();
 thisYear = today.getFullYear();
 
-// DOM
+// DOM to select footer
 const footer = document.querySelector("footer");
 
 // Create copyright paragraph and add it to footer
@@ -80,6 +78,8 @@ messageForm.addEventListener("submit", (event) => {
 
   messageForm.reset();
 });
+
+// Display names of GitHub repositories
 
 fetch("https://api.github.com/users/ChazBeauchamp/repos", { mode: "cors" })
   .then(function (response) {

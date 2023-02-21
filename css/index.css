@@ -94,7 +94,7 @@ input {
 
 footer {
   padding: 6px 12px;
-  background-color: steelblue;
+  /* background-color: steelblue; */
 }
 
 .flex-container {
@@ -118,7 +118,7 @@ form,
 
 @media screen and (max-width: 500px) {
   .info {
-    font-size: xx-small;
+    font-size: small;
   }
 }
 
@@ -130,6 +130,6 @@ form,
 
 @media screen and (min-width: 851px) {
   footer {
-    background-color: black;
+    /* background-color: black; */
   }
 }
